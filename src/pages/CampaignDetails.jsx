@@ -31,7 +31,7 @@ function CampaignDetails() {
 
   const handleDonate = async () => {
     setIsLoading(true);
-
+    console.log(amount);
     await donate(state.pId, amount);
 
     navigate("/");
@@ -162,12 +162,23 @@ function CampaignDetails() {
                 </p>
               </div>
 
-              <CustomButton
-                btnType="button"
-                title="Fund Campaign"
-                styles="w-full bg-[#8c6dfd]"
-                handleClick={handleDonate}
-              />
+              {amount > 0.01 ? (
+                <CustomButton
+                  isDisabled={false}
+                  btnType="button"
+                  title="Fund Campaign"
+                  styles="w-full bg-[#8c6dfd]"
+                  handleClick={handleDonate}
+                />
+              ) : (
+                <CustomButton
+                  isDisabled={true}
+                  btnType="button"
+                  title="Fund Campaign"
+                  styles="w-full bg-[#8c6dfd]"
+                  handleClick={handleDonate}
+                />
+              )}
             </div>
           </div>
         </div>

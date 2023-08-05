@@ -11,9 +11,7 @@ import { ethers } from "ethers";
 const StateContext = createContext();
 
 export const StateContextProvider = ({ children }) => {
-  const { contract, isLoading } = useContract(
-    "0xB6De8580236DeC6Dced31b32C605Bb4Dc963F6ab"
-  );
+  const { contract } = useContract("0xB6De8580236DeC6Dced31b32C605Bb4Dc963F6ab");
   const { mutateAsync: createCampaign } = useContractWrite(contract, "createCampaign");
 
   const address = useAddress();
@@ -23,11 +21,11 @@ export const StateContextProvider = ({ children }) => {
     try {
       const data = await createCampaign({
         args: [
-          address, // owner
-          form.title, // title
-          form.description, // description
+          address,
+          form.title,
+          form.description,
           form.target,
-          new Date(form.deadline).getTime(), // deadline,
+          new Date(form.deadline).getTime(),
           form.image,
         ],
       });
