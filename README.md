@@ -1,4 +1,4 @@
-# Car Show
+# Blockchain Crowdfunding Platform
 
 - DEMO LINK (https://blockchain-platform.netlify.app/)
 
@@ -16,5 +16,5 @@ Web3 Blockchain Crowdfunding Platform
 Blockchain-platform.gif
 
 <div style="display: flex;">
-  <img src="https://github.com/mo-beridze/Blockchain-platform/blob/main/src/assets/Blockchain-platform.gif" width="600">
+  <img src="https://github.com/mo-beridze/Blockchain-platform/blob/main/src/assets/Blockchain-platform%20-%20Google%20Chrome%202023-08-07%2017-00-50.gif" width="600">
 </div>
